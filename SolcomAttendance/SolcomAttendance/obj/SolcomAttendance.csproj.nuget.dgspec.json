@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj": {}
+    "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj": {}
   },
   "projects": {
-    "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj": {
+    "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj",
+        "projectUniqueName": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj",
         "projectName": "SolcomAttendance",
-        "projectPath": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj",
+        "projectPath": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj",
         "packagesPath": "C:\\Users\\武藤　武\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\obj\\",
+        "outputPath": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "XamForms.Controls.Calendar": {
+              "target": "Package",
+              "version": "[1.1.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

@@ -841,10 +841,25 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
+      "XamForms.Controls.Calendar/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.3.4.231"
+        },
+        "compile": {
+          "lib/MonoAndroid10/XamForms.Controls.Calendar.Droid.dll": {},
+          "lib/MonoAndroid10/XamForms.Controls.Calendar.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/XamForms.Controls.Calendar.Droid.dll": {},
+          "lib/MonoAndroid10/XamForms.Controls.Calendar.dll": {}
+        }
+      },
       "SolcomAttendance/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "XamForms.Controls.Calendar": "1.1.1",
           "Xamarin.Essentials": "1.1.0",
           "Xamarin.Forms": "4.0.0.425677"
         },
@@ -1979,6 +1994,30 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "XamForms.Controls.Calendar/1.1.1": {
+      "sha512": "GCydwm9HO+8V4iGVsGJZtnHJaqIpjas40BSRU+T7lIM7E4nZ7pOn2Ifzu0Y6MLrZJuqCHFeroOWjJSfOjZIyyw==",
+      "type": "package",
+      "path": "xamforms.controls.calendar/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/XamForms.Controls.Calendar.Droid.dll",
+        "lib/MonoAndroid10/XamForms.Controls.Calendar.dll",
+        "lib/MonoTouch10/XamForms.Controls.Calendar.dll",
+        "lib/MonoTouch10/XamForms.Controls.Calendar.iOS.dll",
+        "lib/UAP10/XamForms.Controls.Calendar.UWP.dll",
+        "lib/UAP10/XamForms.Controls.Calendar.dll",
+        "lib/Xamarin.iOS10/XamForms.Controls.Calendar.dll",
+        "lib/Xamarin.iOS10/XamForms.Controls.Calendar.iOS.dll",
+        "lib/portable-net45+wp8+win8+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/XamForms.Controls.Calendar.dll",
+        "lib/win81/XamForms.Controls.Calendar.Windows.dll",
+        "lib/win81/XamForms.Controls.Calendar.dll",
+        "lib/wpa81/XamForms.Controls.Calendar.WinPhone.dll",
+        "lib/wpa81/XamForms.Controls.Calendar.dll",
+        "xamforms.controls.calendar.1.1.1.nupkg.sha512",
+        "xamforms.controls.calendar.nuspec"
+      ]
+    },
     "SolcomAttendance/1.0.0": {
       "type": "project",
       "path": "../SolcomAttendance/SolcomAttendance.csproj",
@@ -1988,6 +2027,7 @@
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
       "SolcomAttendance >= 1.0.0",
+      "XamForms.Controls.Calendar >= 1.1.1",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.1",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.1",
       "Xamarin.Android.Support.Design >= 28.0.0.1",
@@ -2006,11 +2046,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj",
+      "projectUniqueName": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj",
       "projectName": "SolcomAttendance.Android",
-      "projectPath": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj",
+      "projectPath": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj",
       "packagesPath": "C:\\Users\\武藤　武\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance.Android\\obj\\",
+      "outputPath": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2031,8 +2071,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj": {
-              "projectPath": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj"
+            "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj": {
+              "projectPath": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj"
             }
           }
         }
@@ -2041,6 +2081,10 @@
     "frameworks": {
       "monoandroid90": {
         "dependencies": {
+          "XamForms.Controls.Calendar": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
           "Xamarin.Android.Support.Core.Utils": {
             "target": "Package",
             "version": "[28.0.0.1, )"

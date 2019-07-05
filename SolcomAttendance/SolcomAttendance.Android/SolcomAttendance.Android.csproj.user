@@ -2,5 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SelectedDevice>Sony SO-04J</SelectedDevice>
+    <DefaultDevice>test</DefaultDevice>
   </PropertyGroup>
 </Project>

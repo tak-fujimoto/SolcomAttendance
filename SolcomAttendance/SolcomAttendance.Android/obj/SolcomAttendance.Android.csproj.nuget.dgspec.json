@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj": {}
+    "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj": {
+    "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj",
+        "projectUniqueName": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj",
         "projectName": "SolcomAttendance.Android",
-        "projectPath": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj",
+        "projectPath": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.Android\\SolcomAttendance.Android.csproj",
         "packagesPath": "C:\\Users\\武藤　武\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance.Android\\obj\\",
+        "outputPath": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj": {
-                "projectPath": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj"
+              "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj": {
+                "projectPath": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "XamForms.Controls.Calendar": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
             "Xamarin.Android.Support.Core.Utils": {
               "target": "Package",
               "version": "[28.0.0.1, )"
@@ -82,14 +86,14 @@
         }
       }
     },
-    "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj": {
+    "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj",
+        "projectUniqueName": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj",
         "projectName": "SolcomAttendance",
-        "projectPath": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj",
+        "projectPath": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance.csproj",
         "packagesPath": "C:\\Users\\武藤　武\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\武藤　武\\Documents\\xamarin_solcom_attendance\\XamarinTraining\\SolcomAttendance\\SolcomAttendance\\obj\\",
+        "outputPath": "C:\\Users\\武藤　武\\Documents\\solcom_attendance\\SolcomAttendance\\SolcomAttendance\\SolcomAttendance\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -126,6 +130,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "XamForms.Controls.Calendar": {
+              "target": "Package",
+              "version": "[1.1.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
