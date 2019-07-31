@@ -1,0 +1,15 @@
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\bin\Debug\netstandard2.0\SolcomAttendance.deps.json
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\bin\Debug\netstandard2.0\SolcomAttendance.dll
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\bin\Debug\netstandard2.0\ref\SolcomAttendance.dll
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\bin\Debug\netstandard2.0\SolcomAttendance.pdb
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\SolcomAttendance.csprojAssemblyReference.cache
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\Attendance.xaml.g.cs
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\SolcomAttendance.csproj.CoreCompileInputs.cache
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\SolcomAttendance.AssemblyInfoInputs.cache
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\SolcomAttendance.AssemblyInfo.cs
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\SolcomAttendance.dll
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\ref\SolcomAttendance.dll
+C:\Users\武藤　武\Documents\solcom_attendance\SolcomAttendance\SolcomAttendance\SolcomAttendance\obj\Debug\netstandard2.0\SolcomAttendance.pdb

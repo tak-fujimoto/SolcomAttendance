@@ -10,7 +10,10 @@ namespace SolcomAttendance
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            // 2019/07/31 武藤 メイン画面確認用 STR
+            //MainPage = new MainPage();
+            MainPage = new Page1();
+            // 2019/07/31 武藤 メイン画面確認用 END
         }
 
         protected override void OnStart()

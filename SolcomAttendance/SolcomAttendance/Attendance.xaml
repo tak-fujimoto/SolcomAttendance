@@ -69,84 +69,89 @@
                 x:Name="line2"
                 HeightRequest="1" />
 
-            <!-- 勤怠 -->
-            <StackLayout
-                Orientation="Horizontal"
-                HorizontalOptions="Start" >
+            <controls1:ExpandableGrid Caption="勤怠">
+                <controls1:ExpandableGrid.Content>
+                    <StackLayout x:Name="ExpandableLayout">
+                        <!-- 勤怠 -->
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="Start" >
 
-                <BoxView
-                    BackgroundColor="Default"
-                    HeightRequest="0"
-                    WidthRequest="10"/>
-                <Label
-                    BackgroundColor="Default"
-                    Text="勤怠" >
-                </Label>
-                <BoxView
-                    BackgroundColor="Default"
-                    HeightRequest="0"/>
-            </StackLayout>
+                        <BoxView
+                            BackgroundColor="Default"
+                            HeightRequest="0"
+                            WidthRequest="10"/>
+                            <Label
+                                BackgroundColor="Default"
+                                Text="勤怠" >
+                            </Label>
+                         <BoxView
+                            BackgroundColor="Default"
+                            HeightRequest="0"/>
+                        </StackLayout>
 
+                        <!-- 出勤/退勤 -->
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="Start" >
 
-            <!-- 出勤/退勤 -->
-            <StackLayout
-                Orientation="Horizontal"
-                HorizontalOptions="Start" >
+                            <BoxView
+                                BackgroundColor="Default"
+                                HeightRequest="0"
+                                WidthRequest="10"/>
 
-                <BoxView
-                    BackgroundColor="Default"
-                    HeightRequest="0"
-                    WidthRequest="10"/>
-                
-                <StackLayout
-                Orientation="Vertical"
-                HorizontalOptions="Start" >
-                    
-                    <Label
-                    BackgroundColor="Default"
-                    Text="出勤" >
-                    </Label>
-                    <TimePicker Format="hh:mm tt"/>
-                </StackLayout>
-                
-                <StackLayout
-                    Orientation="Vertical"
-                    HorizontalOptions="Start" >
+                            <StackLayout
+                                Orientation="Vertical"
+                                HorizontalOptions="Start" >
 
-                    <BoxView
-                    BackgroundColor="Default"
-                    HeightRequest="0"
-                    WidthRequest="30"/>
-                </StackLayout>
-                
-                <StackLayout
-                Orientation="Vertical"
-                HorizontalOptions="Start" >
+                                <Label
+                                    BackgroundColor="Default"
+                                    Text="出勤" >
+                                </Label>
+                                <TimePicker Format="hh:mm tt"/>
+                            </StackLayout>
 
-                    <Label
-                    BackgroundColor="Default"
-                    Text="退勤" >
-                    </Label>
-                    <TimePicker Format="hh:mm tt"/>
-                </StackLayout>
-            </StackLayout>
+                            <StackLayout
+                                Orientation="Vertical"
+                                HorizontalOptions="Start" >
 
-            <StackLayout
-                Orientation="Horizontal"
-                HorizontalOptions="Start" >
+                                <BoxView
+                                    BackgroundColor="Default"
+                                    HeightRequest="0"
+                                    WidthRequest="30"/>
+                            </StackLayout>
 
-                <BoxView
-                    BackgroundColor="Default"
-                    HeightRequest="0"
-                    WidthRequest="10"/>
+                            <StackLayout
+                                Orientation="Vertical"
+                                HorizontalOptions="Start" >
 
-                <Label
-                    BackgroundColor="Default"
-                    Text="備考" >
-                </Label>
-            </StackLayout>
-            <Entry
-                    FontSize="15"/>
+                                <Label
+                                    BackgroundColor="Default"
+                                    Text="退勤" >
+                                </Label>
+                                <TimePicker Format="hh:mm tt"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="Start" >
+
+                            <BoxView
+                                BackgroundColor="Default"
+                                HeightRequest="0"
+                                WidthRequest="10"/>
+
+                            <Label
+                                BackgroundColor="Default"
+                                Text="備考" >
+                            </Label>
+                        </StackLayout>
+                        <Entry
+                            FontSize="15"/>
+                    </StackLayout>
+                </controls1:ExpandableGrid.Content>
+            </controls1:ExpandableGrid>
 
         </StackLayout>
     </ContentPage.Content>
