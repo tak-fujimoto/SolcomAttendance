@@ -12,9 +12,11 @@ namespace SolcomAttendance
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page1 : ContentPage
     {
-        public Page1()
+        public Page1(string name)
         {
             InitializeComponent();
+
+            label.Text = name;
         }
     }
 }

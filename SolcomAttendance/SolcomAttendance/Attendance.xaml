@@ -28,6 +28,7 @@
                     VerticalOptions="Start" >
                 </Label>
                 <Label
+                    x:Name="label"
                     BackgroundColor="Default"
                     Text="アカウント名" 
                     HorizontalOptions="End"

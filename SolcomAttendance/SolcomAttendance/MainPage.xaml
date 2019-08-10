@@ -7,10 +7,29 @@
              x:Class="SolcomAttendance.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="ソルコム勤怠" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <StackLayout
+            Orientation="Vertical"
+            HorizontalOptions="Center">
+
+            <Label
+                Text="サンプル" 
+                VerticalOptions="CenterAndExpand"
+                HeightRequest="30"
+                />
+            <Entry
+                x:Name="username"
+                Placeholder="アカウント名を入力してください"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="Start"
+                WidthRequest="300"
+                />
+            <Button
+                Text="画面遷移" 
+                VerticalOptions="CenterAndExpand"
+                Clicked="OnClickEvent"
+                HeightRequest="50"
+                />
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

@@ -17,5 +17,22 @@ namespace SolcomAttendance
         {
             InitializeComponent();
         }
+        private async void OnClickEvent(object sender, EventArgs e)
+        {
+            // クラスのインスタンスを作成
+            LoginUtil loginUtil = new LoginUtil();
+
+            // getterに設定する
+            loginUtil.username = username.Text;
+
+            // getter「loginUtil.username」を引数に
+            // LoginUtilクラスのCustomUserNameメソッドを呼び出し
+            // 戻り値を変数「name」に格納する
+            string name = loginUtil.CustomUserName(loginUtil.username);
+
+            // 変数「name」を引数に勤怠画面に遷移する
+            // ※この変数「name」がアカウント名として表示される
+            await this.Navigation.PushModalAsync(new Page1(name));
+        }
     }
 }
