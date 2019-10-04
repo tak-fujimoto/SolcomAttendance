@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:XamForms.Controls;assembly=XamForms.Controls.Calendar"
+             xmlns:controls1="clr-namespace:SmartwebsCrossPlatform.Portable.Controls"
+             mc:Ignorable="d"
+             x:Class="SolcomAttendance.Page1">
+    <ContentPage.Content>
+
+        <!-- 画面レイアウト -->
+        <StackLayout>
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center">
+
+                <Label
+                    BackgroundColor="Default"
+                    Text="ログイン状態" 
+                    HorizontalOptions="End"
+                    VerticalOptions="Start" >
+                </Label>
+                <Label
+                    BackgroundColor="Default"
+                    Text="：" 
+                    HorizontalOptions="End"
+                    VerticalOptions="Start" >
+                </Label>
+                <Label
+                    x:Name="label"
+                    BackgroundColor="Default"
+                    Text="アカウント名" 
+                    HorizontalOptions="End"
+                    VerticalOptions="Start" >
+                </Label>
+            </StackLayout>
+
+            <!-- カレンダー -->
+            <controls:Calendar
+                Padding="10,0,10,0"
+                StartDay="Sunday" 
+                SelectedBorderWidth="4"
+                DisabledBorderColor="Black"
+                TitleLabelFormat="yyyy年MM月"/>
+
+            <BoxView
+                BackgroundColor="Black"
+                x:Name="line1"
+                HeightRequest="1" />
+
+            <!-- 予定 -->
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Start" >
+
+                <BoxView
+                    BackgroundColor="Default"
+                    HeightRequest="0"
+                    WidthRequest="10"/>
+
+                <Label
+                    BackgroundColor="Default"
+                    Text="6月4日（火）" >
+                </Label>
+            </StackLayout>
+
+            <BoxView
+                BackgroundColor="Black"
+                x:Name="line2"
+                HeightRequest="1" />
+
+            <controls1:ExpandableGrid Caption="勤怠">
+                <controls1:ExpandableGrid.Content>
+                    <StackLayout x:Name="ExpandableLayout">
+                        <!-- 勤怠 -->
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="Start" >
+
+                        <BoxView
+                            BackgroundColor="Default"
+                            HeightRequest="0"
+                            WidthRequest="10"/>
+                            <Label
+                                BackgroundColor="Default"
+                                Text="勤怠" >
+                            </Label>
+                         <BoxView
+                            BackgroundColor="Default"
+                            HeightRequest="0"/>
+                        </StackLayout>
+
+                        <!-- 出勤/退勤 -->
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="Start" >
+
+                            <BoxView
+                                BackgroundColor="Default"
+                                HeightRequest="0"
+                                WidthRequest="10"/>
+
+                            <StackLayout
+                                Orientation="Vertical"
+                                HorizontalOptions="Start" >
+
+                                <Label
+                                    BackgroundColor="Default"
+                                    Text="出勤" >
+                                </Label>
+                                <TimePicker Format="hh:mm tt"/>
+                            </StackLayout>
+
+                            <StackLayout
+                                Orientation="Vertical"
+                                HorizontalOptions="Start" >
+
+                                <BoxView
+                                    BackgroundColor="Default"
+                                    HeightRequest="0"
+                                    WidthRequest="30"/>
+                            </StackLayout>
+
+                            <StackLayout
+                                Orientation="Vertical"
+                                HorizontalOptions="Start" >
+
+                                <Label
+                                    BackgroundColor="Default"
+                                    Text="退勤" >
+                                </Label>
+                                <TimePicker Format="hh:mm tt"/>
+                            </StackLayout>
+                        </StackLayout>
+
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="Start" >
+
+                            <BoxView
+                                BackgroundColor="Default"
+                                HeightRequest="0"
+                                WidthRequest="10"/>
+
+                            <Label
+                                BackgroundColor="Default"
+                                Text="備考" >
+                            </Label>
+                        </StackLayout>
+                        <Entry
+                            FontSize="15"/>
+                    </StackLayout>
+                </controls1:ExpandableGrid.Content>
+            </controls1:ExpandableGrid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
