@@ -11,24 +11,63 @@
             Orientation="Vertical"
             HorizontalOptions="Center">
 
-            <Label
-                Text="サンプル" 
-                VerticalOptions="CenterAndExpand"
-                HeightRequest="30"
-                />
+
+            <BoxView HeightRequest="50"
+           BackgroundColor="Default"/>
+
+            <Label Text="勤怠管理システム" 
+           FontSize="30" 
+           BackgroundColor="Default"    
+           TextColor ="Black"
+
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="CenterAndExpand" />
+
+            <BoxView HeightRequest="100"
+           BackgroundColor="Default"/>
+
+            <Label Grid.Row="1"
+            FontSize= "20"
+            BackgroundColor="Default"    
+            Text="アカウント" />
+            
             <Entry
                 x:Name="username"
+                Grid.Row="1" Grid.Column="1"
+                IsPassword="False" 
                 Placeholder="アカウント名を入力してください"
                 VerticalOptions="StartAndExpand"
                 HorizontalOptions="Start"
                 WidthRequest="300"
                 />
+            <Label Grid.Row="1"
+            FontSize= "20"
+            BackgroundColor="Default"    
+            Text="PASS" />
+            
+            
+            <Entry Grid.Row="1" Grid.Column="1"
+           IsPassword="True" Placeholder="(PassWord)" />
+
+
+            <BoxView HeightRequest="20"
+           BackgroundColor="Default"/>
+
             <Button
-                Text="画面遷移" 
+                Text="ログイン" 
                 VerticalOptions="CenterAndExpand"
                 Clicked="OnClickEvent"
                 HeightRequest="50"
                 />
+
+            <Button
+                Text="スキップ" 
+                VerticalOptions="CenterAndExpand"
+                Clicked="OnClickEvent"
+                HeightRequest="50"
+                />
+
+
         </StackLayout>
     </StackLayout>
 
