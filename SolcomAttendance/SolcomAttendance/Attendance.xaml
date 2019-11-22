@@ -38,122 +38,118 @@
 
             <!-- カレンダー -->
             <controls:Calendar
+                x:Name="MyCalendar"
                 Padding="10,0,10,0"
                 StartDay="Sunday" 
                 SelectedBorderWidth="4"
                 DisabledBorderColor="Black"
-                TitleLabelFormat="yyyy年MM月"/>
+                TitleLabelFormat="yyyy年MM月"
+                DateClicked="OnDateClickHandler" />
 
             <BoxView
                 BackgroundColor="Black"
                 x:Name="line1"
                 HeightRequest="1" />
 
-            <!-- 予定 -->
             <StackLayout
-                Orientation="Horizontal"
-                HorizontalOptions="Start" >
+                x:Name="SelectedDay"
+                BindingContext="">
+                <!-- 予定 -->
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Start" >
+
+                    <BoxView
+                        BackgroundColor="Default"
+                        HeightRequest="0"
+                        WidthRequest="10"/>
+
+                    <Label
+                        x:Name="date"
+                        BackgroundColor="Default"
+                        Text="{Binding DayStr}">
+                    </Label>
+                </StackLayout>
 
                 <BoxView
-                    BackgroundColor="Default"
-                    HeightRequest="0"
-                    WidthRequest="10"/>
+                    BackgroundColor="Black"
+                    x:Name="line2"
+                    HeightRequest="1" />
 
-                <Label
-                    BackgroundColor="Default"
-                    Text="6月4日（火）" >
-                </Label>
-            </StackLayout>
-
-            <BoxView
-                BackgroundColor="Black"
-                x:Name="line2"
-                HeightRequest="1" />
-
-            <controls1:ExpandableGrid Caption="勤怠">
-                <controls1:ExpandableGrid.Content>
-                    <StackLayout x:Name="ExpandableLayout">
-                        <!-- 勤怠 -->
-                        <StackLayout
-                            Orientation="Horizontal"
-                            HorizontalOptions="Start" >
-
-                        <BoxView
-                            BackgroundColor="Default"
-                            HeightRequest="0"
-                            WidthRequest="10"/>
-                            <Label
-                                BackgroundColor="Default"
-                                Text="勤怠" >
-                            </Label>
-                         <BoxView
-                            BackgroundColor="Default"
-                            HeightRequest="0"/>
-                        </StackLayout>
-
-                        <!-- 出勤/退勤 -->
-                        <StackLayout
-                            Orientation="Horizontal"
-                            HorizontalOptions="Start" >
-
-                            <BoxView
-                                BackgroundColor="Default"
-                                HeightRequest="0"
-                                WidthRequest="10"/>
-
+                <controls1:ExpandableGrid x:Name="AttendanceArea" Caption="勤怠">
+                    <controls1:ExpandableGrid.Content>
+                        <StackLayout x:Name="ExpandableLayout">
+                            <!-- 出勤/退勤 -->
                             <StackLayout
-                                Orientation="Vertical"
-                                HorizontalOptions="Start" >
-
-                                <Label
-                                    BackgroundColor="Default"
-                                    Text="出勤" >
-                                </Label>
-                                <TimePicker Format="hh:mm tt"/>
-                            </StackLayout>
-
-                            <StackLayout
-                                Orientation="Vertical"
+                                Orientation="Horizontal"
                                 HorizontalOptions="Start" >
 
                                 <BoxView
                                     BackgroundColor="Default"
                                     HeightRequest="0"
-                                    WidthRequest="30"/>
+                                    WidthRequest="10"/>
+
+                                <StackLayout
+                                    Orientation="Vertical"
+                                    HorizontalOptions="Start" >
+
+                                    <Label
+                                        BackgroundColor="Default"
+                                        Text="出勤" >
+                                    </Label>
+                                    <TimePicker
+                                        x:Name="StartTime"
+                                        Format="hh:mm tt"
+                                        Time="{Binding StartTime}"/>
+                                </StackLayout>
+
+                                <StackLayout
+                                    Orientation="Vertical"
+                                    HorizontalOptions="Start" >
+
+                                    <BoxView
+                                        BackgroundColor="Default"
+                                        HeightRequest="0"
+                                        WidthRequest="30"/>
+                                </StackLayout>
+
+                                <StackLayout
+                                    Orientation="Vertical"
+                                    HorizontalOptions="Start" >
+
+                                    <Label
+                                        BackgroundColor="Default"
+                                        Text="退勤" >
+                                    </Label>
+                                    <TimePicker
+                                        x:Name="EndTime"
+                                        Format="hh:mm tt"
+                                        Time="{Binding EndTime}"/>
+                                </StackLayout>
                             </StackLayout>
 
                             <StackLayout
-                                Orientation="Vertical"
+                                Orientation="Horizontal"
                                 HorizontalOptions="Start" >
+
+                                <BoxView
+                                    BackgroundColor="Default"
+                                    HeightRequest="0"
+                                    WidthRequest="10"/>
 
                                 <Label
                                     BackgroundColor="Default"
-                                    Text="退勤" >
+                                    Text="備考" >
                                 </Label>
-                                <TimePicker Format="hh:mm tt"/>
                             </StackLayout>
+                            <Entry
+                                Placeholder="備考欄です"
+                                FontSize="15"
+                                Text="{Binding Day.Memo}"/>
                         </StackLayout>
-
-                        <StackLayout
-                            Orientation="Horizontal"
-                            HorizontalOptions="Start" >
-
-                            <BoxView
-                                BackgroundColor="Default"
-                                HeightRequest="0"
-                                WidthRequest="10"/>
-
-                            <Label
-                                BackgroundColor="Default"
-                                Text="備考" >
-                            </Label>
-                        </StackLayout>
-                        <Entry
-                            FontSize="15"/>
-                    </StackLayout>
-                </controls1:ExpandableGrid.Content>
-            </controls1:ExpandableGrid>
-
+                    </controls1:ExpandableGrid.Content>
+                </controls1:ExpandableGrid>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
