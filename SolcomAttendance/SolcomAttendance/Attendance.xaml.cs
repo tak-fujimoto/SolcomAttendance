@@ -32,5 +32,52 @@ namespace SolcomAttendance
             var ClickedDay = NowMonth.GetDay(e.DateTime);
             NowDay.ChangeDay(ClickedDay);
         }
+
+        /// <summary>
+        /// 設定ボタン押下時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private async void SettingButtonClicked(object sender, EventArgs args)
+        {
+            // 設定画面へ遷移
+            // TODO STR
+            // TODO END
+        }
+
+        /// <summary>
+        /// ログアウトボタン押下時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private async void LogoutButtonClicked(object sender, EventArgs args)
+        {
+            // ログイン画面へ遷移
+            await this.Navigation.PushModalAsync(new MainPage());
+        }
+
+        /// <summary>
+        /// 登録ボタン押下時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private async void RegisterButtonClicked(object sender, EventArgs args)
+        {
+            // 設定画面へ遷移
+            // TODO STR
+            // TODO END
+        }
+
+        /// <summary>
+        /// 有給スイッチON時
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnPaidToggled(object sender, ToggledEventArgs e)
+        {
+            // 有給スイッチがONになった場合に備考欄に「有給休暇」を入力
+            // TODO STR
+            // TODO END
+        }
     }
 }

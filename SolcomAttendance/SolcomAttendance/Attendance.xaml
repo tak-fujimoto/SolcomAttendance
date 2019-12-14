@@ -11,13 +11,39 @@
 
         <!-- 画面レイアウト -->
         <StackLayout>
+            <BoxView
+                BackgroundColor="Black"
+                x:Name="line3"
+                HeightRequest="1" />
+
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center">
+
+                <Button
+                    Text="設定"
+                    HorizontalOptions="Start"
+                    BorderRadius="0"
+                    HeightRequest="40"
+                    WidthRequest="170"
+                    Clicked="SettingButtonClicked" />
+
+                <Button
+                    Text="ログアウト"
+                    HorizontalOptions="End"
+                    BorderRadius="0"
+                    HeightRequest="40"
+                    WidthRequest="170"
+                    Clicked="LogoutButtonClicked" />
+            </StackLayout>
+            
             <StackLayout
                 Orientation="Horizontal"
                 HorizontalOptions="Center">
 
                 <Label
                     BackgroundColor="Default"
-                    Text="ログイン状態" 
+                    Text="ユーザー" 
                     HorizontalOptions="End"
                     VerticalOptions="Start" >
                 </Label>
@@ -76,79 +102,112 @@
                     x:Name="line2"
                     HeightRequest="1" />
 
-                <controls1:ExpandableGrid x:Name="AttendanceArea" Caption="勤怠">
-                    <controls1:ExpandableGrid.Content>
-                        <StackLayout x:Name="ExpandableLayout">
-                            <!-- 出勤/退勤 -->
-                            <StackLayout
-                                Orientation="Horizontal"
-                                HorizontalOptions="Start" >
+                <StackLayout>
+                    <!-- 出勤/退勤 -->
+                    <StackLayout
+                        Orientation="Horizontal"
+                        HorizontalOptions="Start" >
 
-                                <BoxView
-                                    BackgroundColor="Default"
-                                    HeightRequest="0"
-                                    WidthRequest="10"/>
+                        <BoxView
+                            BackgroundColor="Default"
+                            HeightRequest="0"
+                            WidthRequest="2"/>
 
-                                <StackLayout
-                                    Orientation="Vertical"
-                                    HorizontalOptions="Start" >
+                        <StackLayout
+                            Orientation="Vertical"
+                            HorizontalOptions="Start" >
 
-                                    <Label
-                                        BackgroundColor="Default"
-                                        Text="出勤" >
-                                    </Label>
-                                    <TimePicker
-                                        x:Name="StartTime"
-                                        Format="hh:mm tt"
-                                        Time="{Binding StartTime}"/>
-                                </StackLayout>
-
-                                <StackLayout
-                                    Orientation="Vertical"
-                                    HorizontalOptions="Start" >
-
-                                    <BoxView
-                                        BackgroundColor="Default"
-                                        HeightRequest="0"
-                                        WidthRequest="30"/>
-                                </StackLayout>
-
-                                <StackLayout
-                                    Orientation="Vertical"
-                                    HorizontalOptions="Start" >
-
-                                    <Label
-                                        BackgroundColor="Default"
-                                        Text="退勤" >
-                                    </Label>
-                                    <TimePicker
-                                        x:Name="EndTime"
-                                        Format="hh:mm tt"
-                                        Time="{Binding EndTime}"/>
-                                </StackLayout>
-                            </StackLayout>
-
-                            <StackLayout
-                                Orientation="Horizontal"
-                                HorizontalOptions="Start" >
-
-                                <BoxView
-                                    BackgroundColor="Default"
-                                    HeightRequest="0"
-                                    WidthRequest="10"/>
-
-                                <Label
-                                    BackgroundColor="Default"
-                                    Text="備考" >
-                                </Label>
-                            </StackLayout>
-                            <Entry
-                                Placeholder="備考欄です"
-                                FontSize="15"
-                                Text="{Binding Day.Memo}"/>
+                            <Label
+                                BackgroundColor="Default"
+                                Text="出勤" >
+                            </Label>
+                            <TimePicker
+                                x:Name="StartTime"
+                                Format="hh:mm tt"
+                                Time="{Binding StartTime}"/>
                         </StackLayout>
-                    </controls1:ExpandableGrid.Content>
-                </controls1:ExpandableGrid>
+
+                        <StackLayout
+                            Orientation="Vertical"
+                            HorizontalOptions="Start" >
+
+                            <BoxView
+                                BackgroundColor="Default"
+                                HeightRequest="0"
+                                WidthRequest="5"/>
+                        </StackLayout>
+
+                        <StackLayout
+                            Orientation="Vertical"
+                            HorizontalOptions="Start" >
+
+                            <Label
+                                BackgroundColor="Default"
+                                Text="退勤" >
+                            </Label>
+                            <TimePicker
+                                x:Name="EndTime"
+                                Format="hh:mm tt"
+                                Time="{Binding EndTime}"/>
+                        </StackLayout>
+
+                        <StackLayout
+                            Orientation="Vertical"
+                            HorizontalOptions="Start" >
+
+                            <BoxView
+                                BackgroundColor="Default"
+                                HeightRequest="0"
+                                WidthRequest="5"/>
+                        </StackLayout>
+
+                        <StackLayout
+                            Orientation="Vertical"
+                            HorizontalOptions="Start" >
+                            <Label
+                                BackgroundColor="Default"
+                                Text="有給" >
+                            </Label>
+                            <Switch 
+                                IsToggled="False"
+                                x:Name = "Paid"
+                                Toggled = "OnPaidToggled" >
+                            </Switch>
+                        </StackLayout>
+
+                        <StackLayout
+                            Orientation="Vertical"
+                            HorizontalOptions="Start" >
+
+                            <BoxView
+                                BackgroundColor="Default"
+                                HeightRequest="0"
+                                WidthRequest="5"/>
+                        </StackLayout>
+                        
+                        <Button
+                            Text="登録"
+                            BorderRadius="0"
+                            HeightRequest="40"
+                            WidthRequest="60"
+                            Clicked="RegisterButtonClicked" />
+
+                        <StackLayout
+                            Orientation="Vertical"
+                            HorizontalOptions="Start" >
+
+                            <BoxView
+                                BackgroundColor="Default"
+                                HeightRequest="0"
+                                WidthRequest="10"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Entry
+                        x:Name="Memo"
+                        Placeholder="備考を入力してください"
+                        FontSize="15"
+                        Text="{Binding Day.Memo}"/>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
