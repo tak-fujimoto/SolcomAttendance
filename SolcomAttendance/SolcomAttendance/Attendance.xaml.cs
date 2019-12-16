@@ -13,6 +13,7 @@ namespace SolcomAttendance
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page1 : ContentPage
     {
+        readonly AttendanceRepository _db = new AttendanceRepository();
         Monthly NowMonth;
         DisplayDay NowDay;
 
