@@ -41,6 +41,7 @@ namespace SolcomAttendance
         private async void SettingButtonClicked(object sender, EventArgs args)
         {
             // 設定画面へ遷移
+            await this.Navigation.PushModalAsync(new SettingPage());
             // TODO STR
             // TODO END
         }
