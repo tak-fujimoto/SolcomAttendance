@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SolcomAttendance.SettingPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+
+
+        <Label Text="設定画面" 
+           FontSize="30" 
+           BackgroundColor="Default"    
+           TextColor ="Black"
+
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="End" />
+
+        <BoxView HeightRequest="10"
+           BackgroundColor="Default"/>
+
+
+        <StackLayout Orientation="Horizontal">
+
+            <Label BackgroundColor="Default"
+                FontSize="30"
+                Text="定時" >
+            </Label>
+            <TimePicker Format="hh:mm tt"/>
+            <Label BackgroundColor="Default"
+                FontSize="30"
+                Text="-" >
+            </Label>
+            <TimePicker Format="hh:mm tt"/>
+        </StackLayout>
+
+        <BoxView HeightRequest="10"
+           BackgroundColor="Default"/>
+
+        <StackLayout Orientation="Horizontal">
+
+            <Label BackgroundColor="Default"
+                FontSize="30"
+                Text="有休" >
+            </Label>
+            <Entry Keyboard="Numeric" MaxLength="2" Placeholder="20" />
+        </StackLayout>
+
+        <BoxView HeightRequest="10"
+           BackgroundColor="Default"/>
+
+        <StackLayout Orientation="Horizontal"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="EndAndExpand">
+
+            <Button x:Name="NextButton1"
+            TextColor ="Black"
+            BackgroundColor="SkyBlue"
+            Text="OK"
+            Clicked="SettingButtonClicked" />
+            <Button x:Name="NextButton2"
+            TextColor ="Black"
+            BackgroundColor="Red"
+            Text="Cancel"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
