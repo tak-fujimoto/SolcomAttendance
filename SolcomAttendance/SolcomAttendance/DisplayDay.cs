@@ -7,9 +7,9 @@ namespace SolcomAttendance
 {
     public class DisplayDay : INotifyPropertyChanged
     {
-        private Daily day;
+        private AttendanceMaster day;
 
-        public Daily Day
+        public AttendanceMaster Day
         {
             get
             {
@@ -79,24 +79,20 @@ namespace SolcomAttendance
             }
         }
 
-        public DisplayDay(Daily ArgDay)
+        public DisplayDay(AttendanceMaster ArgDay)
         {
             Day = ArgDay;
-            DayStr = ArgDay.GetDayStr();
+            DayStr = ArgDay.WorkDate.ToString("MMŒŽdd“ú(ddd)", new System.Globalization.CultureInfo("ja-JP"));
             StartTime = new TimeSpan(ArgDay.StartTime.Hour, ArgDay.StartTime.Minute,0);
             EndTime = new TimeSpan(ArgDay.EndTime.Hour, ArgDay.EndTime.Minute, 0);
         }
 
-        public void ChangeDay(Daily NewDay)
+        public void ChangeDay(AttendanceMaster ArgDay)
         {
-            var OldDay = this.Day;
-            OldDay.UpdateStartTime(this.StartTime.Hours,this.StartTime.Minutes);
-            OldDay.UpdateEndTime(this.EndTime.Hours, this.EndTime.Minutes,false);
-
-            this.Day = NewDay;
-            this.DayStr = NewDay.GetDayStr();
-            this.StartTime = new TimeSpan(NewDay.StartTime.Hour, NewDay.StartTime.Minute, 0);
-            this.EndTime = new TimeSpan(NewDay.EndTime.Hour, NewDay.EndTime.Minute, 0);
+            Day = ArgDay;
+            DayStr = ArgDay.WorkDate.ToString("MMŒŽdd“ú(ddd)", new System.Globalization.CultureInfo("ja-JP"));
+            StartTime = new TimeSpan(ArgDay.StartTime.Hour, ArgDay.StartTime.Minute, 0);
+            EndTime = new TimeSpan(ArgDay.EndTime.Hour, ArgDay.EndTime.Minute, 0);
         }
 
         /// <summary>
@@ -111,6 +107,15 @@ namespace SolcomAttendance
                 PropertyChanged(this,
                   new PropertyChangedEventArgs(propertyName));
             }
+        }
+        public void UpdateTime()
+        {
+            var MyYear = Day.WorkDate.Year;
+            var MyMonth = Day.WorkDate.Month;
+            var MyDay = Day.WorkDate.Day;
+
+            Day.StartTime = new DateTime(MyYear, MyMonth, MyDay, this.StartTime.Hours, this.StartTime.Minutes, 0);
+            Day.EndTime = new DateTime(MyYear, MyMonth, MyDay, this.EndTime.Hours, this.EndTime.Minutes, 0);
         }
     }
 }

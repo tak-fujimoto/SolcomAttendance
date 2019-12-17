@@ -8,24 +8,36 @@ namespace SolcomAttendance
     {
         private DateTime YearMonth;
 
-        public List<Daily> Days;
+        public Dictionary<DateTime, AttendanceMaster> Days;
 
         public Monthly(DateTime ArgYearMonth)
         {
             YearMonth = new DateTime(ArgYearMonth.Year, ArgYearMonth.Month, 1);
-            Days = new List<Daily>();
+            Days = new Dictionary<DateTime, AttendanceMaster>();
 
-            var LastDay = YearMonth.AddMonths(1).AddDays(-1).Day;
+            //var LastDay = YearMonth.AddMonths(1).AddDays(-1).Day;
 
-            for (int DayCount = 0; DayCount <= LastDay; DayCount++)
-            {
-                Days.Add(new Daily(YearMonth.AddDays(DayCount)));
-            }
+            //for (int DayCount = 0; DayCount <= LastDay; DayCount++)
+            //{
+            //    Days.Add(new Daily(YearMonth.AddDays(DayCount)));
+            //}
         }
 
-        public Daily GetDay(DateTime TargetDay)
+        public AttendanceMaster GetDay(DateTime TargetDay)
         {
-            return this.Days[TargetDay.Day - 1];
+            if(Days.ContainsKey(TargetDay))
+            {
+                return Days[TargetDay];
+            }
+            else
+            {
+                AttendanceMaster a = new AttendanceMaster();
+                Days.Add(TargetDay, a);
+
+                a.WorkDate = TargetDay;
+
+                return a;
+            }
         }
     }
 }

@@ -31,6 +31,7 @@ namespace SolcomAttendance
         private void OnDateClickHandler(object sender, DateTimeEventArgs e)
         {
             var ClickedDay = NowMonth.GetDay(e.DateTime);
+
             NowDay.ChangeDay(ClickedDay);
         }
 
@@ -39,10 +40,10 @@ namespace SolcomAttendance
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private async void SettingButtonClicked(object sender, EventArgs args)
+        private void SettingButtonClicked(object sender, EventArgs args)
         {
             // 設定画面へ遷移
-            await this.Navigation.PushModalAsync(new SettingPage());
+            //await this.Navigation.PushModalAsync(new SettingPage());
             // TODO STR
             // TODO END
         }
@@ -63,10 +64,15 @@ namespace SolcomAttendance
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private async void RegisterButtonClicked(object sender, EventArgs args)
+        private void RegisterButtonClicked(object sender, EventArgs args)
         {
             // 設定画面へ遷移
             // TODO STR
+            NowDay.UpdateTime();
+
+            // DBに勤怠データを書き込む
+            _db.SaveItem(NowDay.Day);
+            var a = _db.GetItems();
             // TODO END
         }
 
