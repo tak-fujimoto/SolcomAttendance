@@ -13,6 +13,7 @@ namespace SolcomAttendance
         public DateTime EndTime { get; set; }
         public short BreakTime { get; set; }
         public string Memo { get; set; }
+        public bool UQFLG { get; set; }
         public DateTime EntryDateTime { get; set; }
         public DateTime UpdateDateTime { get; set; }
     }
