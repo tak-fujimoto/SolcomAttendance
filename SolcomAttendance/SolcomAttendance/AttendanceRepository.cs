@@ -15,6 +15,7 @@ namespace SolcomAttendance
             _db = DependencyService.Get<ISQLite>().GetConnection();
             //テーブル作成
             _db.CreateTable<AttendanceMaster>();
+            _db.CreateTable<SettingMaster>();
         }
 
         //一覧
