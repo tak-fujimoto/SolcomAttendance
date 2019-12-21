@@ -43,9 +43,7 @@ namespace SolcomAttendance
         private void SettingButtonClicked(object sender, EventArgs args)
         {
             // 設定画面へ遷移
-            //await this.Navigation.PushModalAsync(new SettingPage());
-            // TODO STR
-            // TODO END
+            this.Navigation.PushModalAsync(new SettingPage());
         }
 
         /// <summary>
@@ -53,10 +51,10 @@ namespace SolcomAttendance
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="args"></param>
-        private async void LogoutButtonClicked(object sender, EventArgs args)
+        private void LogoutButtonClicked(object sender, EventArgs args)
         {
             // ログイン画面へ遷移
-            await this.Navigation.PushModalAsync(new MainPage());
+            this.Navigation.PopModalAsync();
         }
 
         /// <summary>
