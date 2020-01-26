@@ -23,7 +23,6 @@ namespace SolcomAttendance
 
             NowMonth = new Monthly(DateTime.Now);
             NowDay = new DisplayDay(NowMonth.GetDay(DateTime.Now));
-
             label.Text = name;
             SelectedDay.BindingContext = NowDay;
         }

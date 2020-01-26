@@ -21,33 +21,84 @@
         <BoxView HeightRequest="10"
            BackgroundColor="Default"/>
 
+        <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center">
+
+            <Label
+                    BackgroundColor="Default"
+                    Text="ユーザー" 
+                    HorizontalOptions="End"
+                    VerticalOptions="Start" >
+            </Label>
+            <Label
+                    BackgroundColor="Default"
+                    Text="：" 
+                    HorizontalOptions="End"
+                    VerticalOptions="Start" >
+            </Label>
+            <Label
+                    x:Name="label"
+                    BackgroundColor="Default"
+                    Text="アカウント名" 
+                    HorizontalOptions="End"
+                    VerticalOptions="Start" >
+            </Label>
+        </StackLayout>
+
 
         <StackLayout Orientation="Horizontal">
 
-            <Label BackgroundColor="Default"
-                FontSize="30"
-                Text="定時" >
-            </Label>
-            <TimePicker Format="hh:mm tt"/>
-            <Label BackgroundColor="Default"
-                FontSize="30"
-                Text="-" >
-            </Label>
-            <TimePicker Format="hh:mm tt"/>
+
+            <StackLayout
+                            Orientation="Vertical"
+                            HorizontalOptions="Start" >
+
+                <Label
+                                BackgroundColor="Default"
+                                Text="出勤" >
+                </Label>
+                <TimePicker
+                                x:Name="StartTime"
+                                Format="hh:mm tt"
+                                Time="{Binding StartTime}"/>
+            </StackLayout>
+
+            <StackLayout
+                            Orientation="Vertical"
+                            HorizontalOptions="Start" >
+
+                <BoxView
+                                BackgroundColor="Default"
+                                HeightRequest="0"
+                                WidthRequest="5"/>
+            </StackLayout>
+
+            <StackLayout
+                            Orientation="Vertical"
+                            HorizontalOptions="Start" >
+
+                <Label
+                                BackgroundColor="Default"
+                                Text="退勤" >
+                </Label>
+                <TimePicker
+                                x:Name="EndTime"
+                                Format="hh:mm tt"
+                                Time="{Binding EndTime}"/>
+            </StackLayout>
+
+            <StackLayout
+         Orientation="Vertical"
+                            HorizontalOptions="Start" >
+
+                <Label Grid.Row="1"
+            FontSize= "20"
+            BackgroundColor="Default"    
+            Text="{Binding BreakTime}"/>
+
+            </StackLayout>
         </StackLayout>
-
-        <BoxView HeightRequest="10"
-           BackgroundColor="Default"/>
-
-        <StackLayout Orientation="Horizontal">
-
-            <Label BackgroundColor="Default"
-                FontSize="30"
-                Text="有休" >
-            </Label>
-            <Entry Keyboard="Numeric" MaxLength="2" Placeholder="20" />
-        </StackLayout>
-
         <BoxView HeightRequest="10"
            BackgroundColor="Default"/>
 

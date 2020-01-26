@@ -42,5 +42,63 @@ namespace SolcomAttendance
                 return _db.Insert(item);
             }
         }
+        /// <summary>
+
+        /// 一覧(設定画面)※全出力
+
+        /// </summary>
+
+        /// <returns></returns>
+
+        public IEnumerable<SettingMaster> GetItems_SettingMaster()
+
+        {
+
+            lock (Locker)
+
+            {
+
+                return _db.Table<SettingMaster>();
+
+            }
+
+        }
+        /// <summary>
+
+        /// 更新・追加(設定画面)
+
+        /// </summary>
+
+        /// <param name="item"></param>
+
+        /// <returns></returns>
+
+        public int SaveItem_SettingMaster(SettingMaster item)
+
+        {
+
+            lock (Locker)
+
+            {
+
+                //ID <> 0の場合は更新
+
+                if (item.ID != 0)
+
+                {
+
+                    _db.Update(item);
+
+                    return item.ID;
+
+                }
+
+                //追加
+
+                return _db.Insert(item);
+
+            }
+
+        }
     }
 }
