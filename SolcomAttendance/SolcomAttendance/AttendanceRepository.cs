@@ -28,7 +28,8 @@ namespace SolcomAttendance
                 var targetMonth = new DateTime(ArgTargetMonth.Year, ArgTargetMonth.Month, 1);
                 var NextMonth = targetMonth.AddMonths(1);
 
-                cmd.CommandText = "SELECT * FROM AttendanceMaster WHERE UserID = '" + UserName + "' AND WorkDate >= Datetime('" + targetMonth.ToString().Substring(0, targetMonth.ToString().Length - 3) + "') AND WorkDate < Datetime('" + NextMonth.ToString().Substring(0, NextMonth.ToString().Length - 3) + "')";
+                //cmd.CommandText = "SELECT * FROM AttendanceMaster WHERE UserID = '" + UserName + "' AND WorkDate >= Datetime('" + targetMonth.ToString().Substring(0, targetMonth.ToString().Length - 3) + "') AND WorkDate < Datetime('" + NextMonth.ToString().Substring(0, NextMonth.ToString().Length - 3) + "')";
+                cmd.CommandText = "SELECT * FROM AttendanceMaster WHERE UserID = '" + UserName + "'";
                 var ret = cmd.ExecuteQuery<AttendanceMaster>();
                 return ret;
             }
