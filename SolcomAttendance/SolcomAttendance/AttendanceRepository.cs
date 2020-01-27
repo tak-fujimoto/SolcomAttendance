@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using SQLite;
 using Xamarin.Forms;
 
 namespace SolcomAttendance
 {
-    class AttendanceRepository
+    public class AttendanceRepository
     {
         static readonly object Locker = new object();
         readonly SQLiteConnection _db;
@@ -16,6 +17,21 @@ namespace SolcomAttendance
             //テーブル作成
             _db.CreateTable<AttendanceMaster>();
             _db.CreateTable<SettingMaster>();
+        }
+
+        // 初期取得
+        public List<AttendanceMaster> GetMonth(string UserName, DateTime ArgTargetMonth)
+        {
+            lock (Locker)
+            {
+                var cmd = new SQLiteCommand(_db);
+                var targetMonth = new DateTime(ArgTargetMonth.Year, ArgTargetMonth.Month, 1);
+                var NextMonth = targetMonth.AddMonths(1);
+
+                cmd.CommandText = "SELECT * FROM AttendanceMaster WHERE UserID = '" + UserName + "' AND WorkDate >= Datetime('" + targetMonth.ToString().Substring(0, targetMonth.ToString().Length - 3) + "') AND WorkDate < Datetime('" + NextMonth.ToString().Substring(0, NextMonth.ToString().Length - 3) + "')";
+                var ret = cmd.ExecuteQuery<AttendanceMaster>();
+                return ret;
+            }
         }
 
         //一覧

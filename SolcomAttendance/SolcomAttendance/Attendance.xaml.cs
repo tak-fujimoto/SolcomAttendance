@@ -13,7 +13,8 @@ namespace SolcomAttendance
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page1 : ContentPage
     {
-        readonly AttendanceRepository _db = new AttendanceRepository();
+        AttendanceRepository _db = new AttendanceRepository();
+        string UserName { get; set; }
         Monthly NowMonth;
         DisplayDay NowDay;
 
@@ -21,8 +22,10 @@ namespace SolcomAttendance
         {
             InitializeComponent();
 
-            NowMonth = new Monthly(DateTime.Now);
+            UserName = name;
+            NowMonth = new Monthly(_db, name,DateTime.Now);
             NowDay = new DisplayDay(NowMonth.GetDay(DateTime.Now));
+
             label.Text = name;
             SelectedDay.BindingContext = NowDay;
         }
