@@ -47,7 +47,8 @@
         </StackLayout>
 
 
-        <StackLayout Orientation="Horizontal">
+        <StackLayout    x:Name="TimesStack"
+                        Orientation="Horizontal">
 
 
             <StackLayout

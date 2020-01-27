@@ -12,16 +12,17 @@ namespace SolcomAttendance
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingPage : ContentPage
     {
-        //確認＿エラー出る
-        //SettingRepositoryって何？
-        //readonly SettingRepository _db = new AttendanceRepository();
+        readonly AttendanceRepository _db = new AttendanceRepository();
 
         //参照設定
-        SetValue Setting;
+        Setting Setting;
 
         public SettingPage()
         {
             InitializeComponent();
+
+            Setting = new Setting(new SettingMaster());
+            TimesStack.BindingContext = Setting;
 
             //DB取得_page1のname？SettingMasterのusername?
 
