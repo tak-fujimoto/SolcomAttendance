@@ -115,7 +115,8 @@
             <Button x:Name="NextButton2"
             TextColor ="Black"
             BackgroundColor="Red"
-            Text="Cancel"/>
+            Text="Cancel"
+            Clicked="CancelButtonClicked" />
         </StackLayout>
 
     </StackLayout>

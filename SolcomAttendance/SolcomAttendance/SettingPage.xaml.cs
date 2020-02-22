@@ -30,16 +30,20 @@ namespace SolcomAttendance
 
         private  void SettingButtonClicked(object sender, EventArgs args)
         {
-            // とりあえずログイン画面へ遷移
-            //await this.Navigation.PushModalAsync(new MainPage());
+            //変換
+            Setting.UpdateSettingValue();
 
-            //変換_エラー出る_参照できてない
-            //Setting.UpdateSettingValue();
+            //入力された情報をDBに書き込み
+            _db.SaveItem_SettingMaster(Setting.Value);
 
-            //入力された情報をDBに書き込み_エラー出る
-            //_db.SaveItem_SettingMaster(Setting.Value);
+            // ログイン画面へ遷移
+            this.Navigation.PopModalAsync();
+        }
 
-
+        private void CancelButtonClicked(object sender, EventArgs args)
+        {
+            // ログイン画面へ遷移
+            this.Navigation.PopModalAsync();
         }
     }
 }
