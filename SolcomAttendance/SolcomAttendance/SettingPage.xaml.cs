@@ -16,16 +16,21 @@ namespace SolcomAttendance
 
         //参照設定
         Setting Setting;
-
-        public SettingPage()
+        // 2020/03/14 武藤 ユーザー名の表示 STR
+        //public SettingPage()
+        public SettingPage(string name)
+        // 2020/03/14 武藤 ユーザー名の表示 STR
         {
             InitializeComponent();
 
             Setting = new Setting(new SettingMaster());
             TimesStack.BindingContext = Setting;
 
-            //DB取得_page1のname？SettingMasterのusername?
-
+            // 2020/03/14 武藤 ユーザー名の表示 STR
+            ////DB取得_page1のname？SettingMasterのusername?
+            // 勤怠画面から渡されたユーザー名の情報を設定し、表示する。
+            label.Text = name;
+            // 2020/03/14 武藤 ユーザー名の表示 END
         }
 
         private  void SettingButtonClicked(object sender, EventArgs args)

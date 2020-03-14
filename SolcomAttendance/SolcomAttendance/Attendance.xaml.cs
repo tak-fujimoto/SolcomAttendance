@@ -45,7 +45,11 @@ namespace SolcomAttendance
         private void SettingButtonClicked(object sender, EventArgs args)
         {
             // 設定画面へ遷移
-            this.Navigation.PushModalAsync(new SettingPage());
+            // 2020/03/14 武藤 ユーザー名の表示 STR
+            //this.Navigation.PushModalAsync(new SettingPage());
+            // 設定画面遷移時にユーザー名の情報を引き渡す
+            this.Navigation.PushModalAsync(new SettingPage(UserName));
+            // 2020/03/14 武藤 ユーザー名の表示 END
         }
 
         /// <summary>
